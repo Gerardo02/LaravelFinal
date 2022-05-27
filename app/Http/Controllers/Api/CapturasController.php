@@ -28,10 +28,10 @@ class CapturasController extends Controller
         $nuevaCaptura -> correo_electronico = $request -> input('correo_electronico');
         $nuevaCaptura -> celular = $request -> input('celular');
 
-        $nuevaCaptura -> save();
-        /*if($nuevaCaptura -> save()){
+        //$nuevaCaptura -> save();
+        if($nuevaCaptura -> save()){
             $respuesta['exito'] = true;
-        }*/
+        }
 
         return $respuesta;
 

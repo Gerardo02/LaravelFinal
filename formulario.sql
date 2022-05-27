@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-05-2022 a las 17:23:13
+-- Tiempo de generación: 27-05-2022 a las 23:35:16
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -40,7 +40,9 @@ CREATE TABLE `datos` (
   `estado` varchar(100) NOT NULL,
   `codigo_postal` varchar(100) NOT NULL,
   `correo_electronico` varchar(100) NOT NULL,
-  `celular` varchar(100) NOT NULL
+  `celular` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
