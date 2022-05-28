@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FuncionesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [FuncionesController::class, 'index']) -> name('funciones.index');
+
+Route::delete('/pedidos/{$id}', [FuncionesController::class, 'destroy']) -> name('funciones.destroy');
